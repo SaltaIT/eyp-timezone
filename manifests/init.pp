@@ -5,15 +5,12 @@
 class timezone(
                             $manage_package        = true,
                             $package_ensure        = 'installed',
-                            $manage_service        = true,
-                            $manage_docker_service = true,
-                            $service_ensure        = 'running',
-                            $service_enable        = true,
+                            $region                = 'Europe',
+                            $locality              = 'Andorra',
                           ) inherits timezone::params{
 
   class { '::timezone::install': } ->
-  class { '::timezone::config': } ~>
-  class { '::timezone::service': } ->
+  class { '::timezone::config': }
   Class['::timezone']
 
 }
