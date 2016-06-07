@@ -2,7 +2,7 @@
   "name": "eyp-timezone",
   "version": "0.1.0",
   "author": "eyp",
-  "summary": null,
+  "summary": "sets timezone",
   "license": "Apache-2.0",
   "source": "https://github.com/NTTCom-MS/eyp-timezone",
   "project_page": null,
