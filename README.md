@@ -50,8 +50,10 @@ It just sets localtime to the appropriate timezone, it doesn't do much fancy stu
 ## Reference
 
 ### timezone
-* **region**: region to be used (default: Europe)
-* **locality**: locality to be used (default: Andorra)
+* **region**: region to be used (default: **Europe**)
+* **locality**: locality to be used (default: **Andorra**)
+* **manage_package**: manage package, usually it's called tzdata (default: **true**)
+* **package_ensure**: package's ensure (default: **installed**)
 
 ## Limitations
 
