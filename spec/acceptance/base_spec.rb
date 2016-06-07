@@ -8,13 +8,20 @@ describe 'timezone class' do
     it 'should work with no errors' do
       pp = <<-EOF
 
-      class { 'timezone': }
+      class { 'timezone':
+        region   => 'Europe',
+        locality => 'Andorra',
+      }
 
       EOF
 
       # Run it twice and test for idempotency
       expect(apply_manifest(pp).exit_code).to_not eq(1)
       expect(apply_manifest(pp).exit_code).to eq(0)
+    end
+
+    it "check default TZ" do
+      expect(shell("bash -c 'date +%Z | grep -E 'CES?T''").exit_code).to be_zero
     end
 
   end
