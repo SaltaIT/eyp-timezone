@@ -20,6 +20,10 @@ describe 'timezone class' do
       expect(apply_manifest(pp).exit_code).to eq(0)
     end
 
+    describe package($packagename) do
+      it { is_expected.to be_installed }
+    end
+
     it "check default TZ" do
       expect(shell("bash -c 'date +%Z | grep -E 'CES?T''").exit_code).to be_zero
     end

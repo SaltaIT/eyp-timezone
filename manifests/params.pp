@@ -1,5 +1,7 @@
 class timezone::params {
 
+  $packagename='tzdata'
+
   case $::osfamily
   {
     'redhat':
