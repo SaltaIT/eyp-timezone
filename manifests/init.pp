@@ -7,10 +7,10 @@ class timezone(
                             $package_ensure        = 'installed',
                             $region                = 'Europe',
                             $locality              = 'Andorra',
-                          ) inherits timezone::params{
+                          ) inherits timezone::params {
 
   class { '::timezone::install': } ->
-  class { '::timezone::config': }
+  class { '::timezone::config': } ->
   Class['::timezone']
 
 }
