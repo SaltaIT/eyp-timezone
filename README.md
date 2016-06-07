@@ -28,6 +28,7 @@ sets timezone coping the actual timezone file to /etc/localtime
 ### What timezone affects
 
 * /etc/localtime
+* manages timezone's package (usually it's called **tzdata**)
 
 ### Setup Requirements
 
