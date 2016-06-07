@@ -44,8 +44,7 @@ class { 'timezone':
 
 ## Usage
 
-Put the classes, types, and resources for customizing, configuring, and doing
-the fancy stuff with your module here.
+It just sets localtime to the appropiate timezone, it doesn't do much fancy stuff.
 
 ## Reference
 
