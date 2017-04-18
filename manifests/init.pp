@@ -1,7 +1,3 @@
-# == Class: timezone
-#
-# === timezone documentation
-#
 class timezone(
                             $manage_package        = true,
                             $package_ensure        = 'installed',
