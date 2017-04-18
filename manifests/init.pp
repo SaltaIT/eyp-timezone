@@ -9,8 +9,8 @@ class timezone(
                             $locality              = 'Andorra',
                           ) inherits timezone::params {
 
-  class { '::timezone::install': } ->
-  class { '::timezone::config': } ->
-  Class['::timezone']
+  class { '::timezone::install': }
+  -> class { '::timezone::config': }
+  -> Class['::timezone']
 
 }
