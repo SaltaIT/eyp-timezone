@@ -8,8 +8,13 @@ class timezone::params {
     {
       case $::operatingsystemrelease
       {
-        /^[5-7].*$/:
+        /^[5-6].*$/:
         {
+          $timezonectl=false
+        }
+        /^7.*$/:
+        {
+          $timezonectl=true
         }
         default: { fail("Unsupported RHEL/CentOS version! - ${::operatingsystemrelease}")  }
       }
@@ -24,6 +29,7 @@ class timezone::params {
           {
             /^1[46].*$/:
             {
+              $timezonectl=false
             }
             default: { fail("Unsupported Ubuntu version! - ${::operatingsystemrelease}")  }
           }
