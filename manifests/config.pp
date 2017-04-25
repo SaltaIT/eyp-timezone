@@ -2,7 +2,7 @@ class timezone::config inherits timezone {
 
   if($timezone::params::timedatectl)
   {
-    exec { 'set timezone':
+    exec { 'set timezone - timedatectl':
       command => "timedatectl set-timezone ${timezone::region}/${timezone::locality}",
       unless  => "timedatectl status | grep \"Time zone: ${timezone::region}/${timezone::locality}\"",
       path    => '/usr/sbin:/usr/bin:/sbin:/bin',
