@@ -1,6 +1,6 @@
 class timezone::config inherits timezone {
 
-  if($timezone::timezonenam!=undef)
+  if($timezone::timezonename!=undef)
   {
     $tzctl_command = "timedatectl set-timezone ${timezone::timezonename}"
     $tzctl_unless = "timedatectl status | grep \"Time zone: ${timezone::timezonename}\""
