@@ -1,14 +1,14 @@
 {
   "name": "eyp-timezone",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": "eyp",
   "summary": "sets timezone",
   "license": "Apache-2.0",
   "source": "https://github.com/NTTCom-MS/eyp-timezone",
-  "project_page": null,
+  "project_page": "https://github.com/NTTCom-MS/eyp-timezone",
   "issues_url": "https://github.com/NTTCom-MS/eyp-timezone/issues",
   "dependencies": [
-    {"name":"puppetlabs/stdlib","version_requirement":">= 1.0.0"},
+    {"name":"puppetlabs/stdlib","version_requirement":">= 1.0.0 < 9.9.9"},
     {"name":"eyp/eyplib","version_requirement":">= 0.1.0 < 0.2.0"}
   ],
   "operatingsystem_support": [
