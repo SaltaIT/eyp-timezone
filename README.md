@@ -53,7 +53,7 @@ class { 'timezone':
 
 ## Usage
 
-It just sets localtime to the appropriate timezone, it doesn't do much fancy stuff.
+It just sets localtime to the appropriate timezone
 
 ## Reference
 
