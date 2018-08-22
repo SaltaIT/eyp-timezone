@@ -31,6 +31,10 @@ class timezone::params {
             {
               $timedatectl=false
             }
+            /^18.*$/:
+            {
+              $timedatectl=true
+            }
             default: { fail("Unsupported Ubuntu version! - ${::operatingsystemrelease}")  }
           }
         }

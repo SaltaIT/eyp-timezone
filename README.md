@@ -43,17 +43,26 @@ class { 'timezone':
 }
 ```
 
-Set UTC:
+## Usage
 
+It just sets localtime to the appropriate timezone
+
+### Set location
+
+```puppet
+class { 'timezone':
+  region   => 'Europe',
+  locality => 'Andorra',
+}
 ```
+
+### Set UTC
+
+```puppet
 class { 'timezone':
   timezonename => 'UTC',
 }
 ```
-
-## Usage
-
-It just sets localtime to the appropriate timezone
 
 ## Reference
 
