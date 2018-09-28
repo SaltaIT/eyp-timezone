@@ -42,6 +42,28 @@ class timezone::params {
         default: { fail('Unsupported Debian flavour!')  }
       }
     }
+    'Suse':
+    {
+      case $::operatingsystem
+      {
+        'SLES':
+        {
+          case $::operatingsystemrelease
+          {
+            '11.3':
+            {
+              $timedatectl=false
+            }
+            '12.3':
+            {
+              $timedatectl=true
+            }
+            default: { fail("Unsupported SLES version ${::operatingsystem} ${::operatingsystemrelease}") }
+          }
+        }
+        default: { fail("Unsupported operating system ${::operatingsystem}") }
+      }
+    }
     default: { fail('Unsupported OS!')  }
   }
 }
