@@ -1,11 +1,10 @@
 class timezone::params {
 
-  $packagename='tzdata'
-
   case $::osfamily
   {
     'redhat':
     {
+      $packagename='tzdata'
       case $::operatingsystemrelease
       {
         /^[5-6].*$/:
@@ -21,6 +20,7 @@ class timezone::params {
     }
     'Debian':
     {
+      $packagename='tzdata'
       case $::operatingsystem
       {
         'Ubuntu':
@@ -52,10 +52,12 @@ class timezone::params {
           {
             '11.3':
             {
+              $packagename='tzdata'
               $timedatectl=false
             }
             '12.3':
             {
+              $packagename='timezone'
               $timedatectl=true
             }
             default: { fail("Unsupported SLES version ${::operatingsystem} ${::operatingsystemrelease}") }
