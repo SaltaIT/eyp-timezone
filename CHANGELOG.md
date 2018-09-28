@@ -14,4 +14,4 @@
 
 ## 0.1.3
 
-* timedatectl support (CentOS 7)
+* timedatectl support
