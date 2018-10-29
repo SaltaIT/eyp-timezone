@@ -52,7 +52,7 @@ class timezone::params {
           {
             '11.3':
             {
-              $packagename='tzdata'
+              $packagename='timezone'
               $timedatectl=false
             }
             '12.3':
